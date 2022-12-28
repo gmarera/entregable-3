@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: honeydew;
+    overflow-x: hidden;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.modal-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.modal-footer {
+    font-weight: bolder;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.img-carrito {
+    width: 200px;
+    padding: 20px;
+}
+
+.modal-content {
+    background-color: white;
+}
+
+#precioTotal {
+    margin: 0;
+    padding: 0;
+}
+
+.cerrar {
+    font-size: 1.3rem;
+
+}
+
+.close {
+    background-color:white;
+    border-radius: 8px 12px;
+}
+
+#carritoContenedor {
+    font-size:large;
+}
