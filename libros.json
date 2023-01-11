@@ -1,70 +1,4 @@
-const libros = [
-    {
-        "titulo": "EL PODER DE LAS PALABRAS",
-        "autor": "Sigman Mariano",
-        "paginas": 352,
-        "img": "https:\/\/contentv2.tap-commerce.com\/cover\/large\/9789877950465_1.jpg",
-        "precio": 4349,
-        "editorial": "Debate",
-        "categoria": "Salud",
-        "cantidad": 1,
-        "id": 9789877950465
-    },
-    {
-        "titulo": "ESTE DOLOR NO ES MIO",
-        "autor": "Wolynn Mark",
-        "paginas": 286,
-        "img": "https:\/\/contentv2.tap-commerce.com\/cover\/large\/9788484456810_1.jpg",
-        "precio": 4900,
-        "editorial": "GAIA Ediciones",
-        "categoria": "Salud",
-        "cantidad": 1,
-        "id": 9788484456810
-    },
-    {
-        "titulo": "EL TIEMPO DE LAS MOSCAS",
-        "autor": "Piñeiro Claudia",
-        "paginas": 408,
-        "img": "https:\/\/contentv2.tap-commerce.com\/cover\/large\/9789877389753_1.jpg",
-        "precio": 3999,
-        "editorial": "Alfaguara",
-        "categoria": "Ficción",
-        "cantidad": 1,
-        "id": 9789877389753
-    },
-    {
-        "titulo": "UN VECINO ANORMAL : EN LA CASA DEL TERROR",
-        "autor": "Morro Daniel",
-        "paginas": 112,
-        "img": "https:\/\/contentv2.tap-commerce.com\/cover\/large\/9789877363432_1.jpg",
-        "precio": 2699,
-        "editorial": "Altea",
-        "categoria": "Infantil",
-        "cantidad": 1,
-        "id": 9789877363432
-    },
-    {
-        "titulo": "VIOLETA",
-        "autor": "Allende Isabel",
-        "paginas": 400,
-        "img": "https:\/\/contentv2.tap-commerce.com\/cover\/large\/9789500766647_1.jpg",
-        "precio": 5449,
-        "editorial": "Sudamericana",
-        "categoria": "Ficción",
-        "cantidad": 1,
-        "id": 9789500766647
-    },
-    {
-        "titulo": "EL PLANNER DE LYNA",
-        "autor": "Vallejos Lyna",
-        "paginas": 208,
-        "img": "https:\/\/contentv2.tap-commerce.com\/cover\/large\/9789877363838_1.jpg",
-        "precio": 3699,
-        "editorial": "Altea",
-        "categoria": "Infantil",
-        "cantidad": 1,
-        "id": 9789877363838
-    },
+[
     {
         "titulo": "ROMPER EL CIRCULO",
         "autor": "Hoover Colleen",
@@ -121,6 +55,28 @@ const libros = [
         "id": 9789504979197
     },
     {
+        "titulo": "EL PODER DE LAS PALABRAS",
+        "autor": "Sigman Mariano",
+        "paginas": 352,
+        "img": "https:\/\/contentv2.tap-commerce.com\/cover\/large\/9789877950465_1.jpg",
+        "precio": 4349,
+        "editorial": "Debate",
+        "categoria": "Salud",
+        "cantidad": 1,
+        "id": 9789877950465
+    },
+    {
+        "titulo": "ESTE DOLOR NO ES MIO",
+        "autor": "Wolynn Mark",
+        "paginas": 286,
+        "img": "https:\/\/contentv2.tap-commerce.com\/cover\/large\/9788484456810_1.jpg",
+        "precio": 4900,
+        "editorial": "GAIA Ediciones",
+        "categoria": "Salud",
+        "cantidad": 1,
+        "id": 9788484456810
+    },
+    {
         "titulo": "SOMOS LO QUE DECIMOS",
         "autor": "Lopez Charlie",
         "paginas": 208,
@@ -152,6 +108,50 @@ const libros = [
         "categoria": "Infantil",
         "cantidad": 1,
         "id": 9789877363869
+    },
+    {
+        "titulo": "EL TIEMPO DE LAS MOSCAS",
+        "autor": "Piñeiro Claudia",
+        "paginas": 408,
+        "img": "https:\/\/contentv2.tap-commerce.com\/cover\/large\/9789877389753_1.jpg",
+        "precio": 3999,
+        "editorial": "Alfaguara",
+        "categoria": "Ficción",
+        "cantidad": 1,
+        "id": 9789877389753
+    },
+    {
+        "titulo": "UN VECINO ANORMAL : EN LA CASA DEL TERROR",
+        "autor": "Morro Daniel",
+        "paginas": 112,
+        "img": "https:\/\/contentv2.tap-commerce.com\/cover\/large\/9789877363432_1.jpg",
+        "precio": 2699,
+        "editorial": "Altea",
+        "categoria": "Infantil",
+        "cantidad": 1,
+        "id": 9789877363432
+    },
+    {
+        "titulo": "VIOLETA",
+        "autor": "Allende Isabel",
+        "paginas": 400,
+        "img": "https:\/\/contentv2.tap-commerce.com\/cover\/large\/9789500766647_1.jpg",
+        "precio": 5449,
+        "editorial": "Sudamericana",
+        "categoria": "Ficción",
+        "cantidad": 1,
+        "id": 9789500766647
+    },
+    {
+        "titulo": "EL PLANNER DE LYNA",
+        "autor": "Vallejos Lyna",
+        "paginas": 208,
+        "img": "https:\/\/contentv2.tap-commerce.com\/cover\/large\/9789877363838_1.jpg",
+        "precio": 3699,
+        "editorial": "Altea",
+        "categoria": "Infantil",
+        "cantidad": 1,
+        "id": 9789877363838
     },
     {
         "titulo": "LOS COMPAS Y LA AVENTURA EN MINIATURA",
@@ -327,108 +327,5 @@ const libros = [
         "categoria": "Ficción",
         "cantidad": 1,
         "id": 9789501516906
-    },
-];
-
-let carrito = []
-
-const contenedor = document.querySelector('#contenedor')
-const carritoContenedor = document.querySelector('#carritoContenedor')
-const vaciarCarrito = document.querySelector('#vaciarCarrito')
-const precioTotal = document.querySelector('#precioTotal')
-
-document.addEventListener('DOMContentLoaded', () => {
-    carrito = JSON.parse(localStorage.getItem('carrito')) || []
-    mostrarCarrito()
-})
-
-let buscador = document.getElementById("searchByText")
-buscador.addEventListener("input", renderizarLibrosFiltrados)
-
-vaciarCarrito.addEventListener('click', () => {
-    carrito.length = []
-    mostrarCarrito()
-})
-
-renderizarLibros(libros)
-
-
-
-function agregarProducto(id) {
-    const existe = carrito.some(libro => libro.id === id)
-    if (existe) {
-        const libro = carrito.map(libro => {
-            if (libro.id === id) {
-                libro.cantidad++
-            }
-        })
-    } else {
-        const libro = libros.find((libro) => libro.id === id)
-        carrito.push(libro)
     }
-    mostrarCarrito()
-}
-
-function eliminarLibro(id) {
-    const libroId = id
-    carrito = carrito.filter((libro) => libro.id !== libroId)
-    mostrarCarrito()
-}
-
-function guardarStorage() {
-    localStorage.setItem("carrito", JSON.stringify(carrito))
-}
-
-function renderizarLibros(libros) {
-    contenedor.innerHTML = ""
-    libros.forEach((libro) => {
-        const { id, titulo, autor, paginas, img, precio, editorial, cantidad, categoria } = libro
-        contenedor.innerHTML += `
-            <div class="card m-1" style="width: 18rem;">
-                <img class="card-img-top mt-2" src="${img}" title="Páginas ${paginas} - ISBN: ${id}">
-                <div class="card-body">
-                    <h5 class="card-title">${titulo}</h5>
-                    <p class="card-text">Autor: ${autor}</p>
-                    <p class="card-text">Editorial: ${editorial}</p>
-                    <p class="card-text">Categoría: ${categoria}</p>
-                    <p class="card-text">Precio: $ ${precio}</p>
-                    <button onclick="agregarProducto(${id})" class="btn btn-primary">Agregar al Carrito</button>
-                </div>
-            </div>`
-})}
-
-function renderizarLibrosFiltrados(e) {
-    let librosFiltrados = libros.filter(o => { return (o.titulo.toLowerCase().includes(buscador.value.toLowerCase()) || o.categoria.toLowerCase().includes(buscador.value.toLowerCase()) || o.editorial.toLowerCase().includes(buscador.value.toLowerCase())) })
-    renderizarLibros(librosFiltrados)
-}
-
-const mostrarCarrito = () => {
-    const modalBody = document.querySelector('.modal .modal-body')
-
-    modalBody.innerHTML = ""
-    carrito.forEach((libro) => {
-        const { id, titulo, autor, paginas, img, precio, editorial, cantidad, categoria } = libro
-        modalBody.innerHTML += `
-    <div class="modal-contenedor">
-        <div>
-            <img class="img-fluid img-carrito" src="${img}"/>
-        </div>
-        <div>
-            <p>Título: ${titulo}</p>
-            <p>Precio: $ ${precio}</p>
-            <p>Cantidad: ${cantidad}</p>
-            <button onclick="eliminarLibro(${id})" class="btn btn-danger">Eliminar Libro</button>
-
-        </div>
-    <div>
-    `
-    })
-    if (carrito.length === 0) {
-        modalBody.innerHTML += `
-        <p class="text-center text-primary">No hay libros en el carrito</p>`
-    }
-    carritoContenedor.textContent = carrito.length
-    precioTotal.textContent = carrito.reduce((acc, libro) => acc + libro.cantidad * libro.precio, 0)
-    guardarStorage()
-}
-
+]

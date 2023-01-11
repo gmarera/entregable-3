@@ -5,8 +5,20 @@
 }
 
 body {
-    background-color: honeydew;
+    background-color: #678983;
     overflow-x: hidden;
+}
+
+.navbar {
+    background-color: #181D31 !important;
+}
+
+.modal-content {
+    background-color: #F0E9D2 !important;
+}
+
+.card {
+    background-color: #F0E9D2;    
 }
 
 a {
@@ -46,10 +58,11 @@ a {
 }
 
 .close {
-    background-color:white;
+    background-color: white;
     border-radius: 8px 12px;
 }
 
 #carritoContenedor {
     font-size:large;
 }
+
